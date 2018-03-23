@@ -75,6 +75,18 @@ namespace mlp {
 			return document["Name"].GetString();
 		}
 
+		inline ConstCPtr get_activate_type(size_t idx) {
+			assert(document.HasMember("Inner"));
+			assert(document["Inner"].IsObject());
+			assert(document["Inner"].HasMember("init_type"));
+			assert(document["Inner"]["init_type"].IsArray());
+			assert((idx >= 0 && idx < document["Inner"]["init_type"].Size()));
+			assert(document["Inner"]["init_type"].IsString());
+			ConstCPtr init_type = document["Inner"]["init_type"].GetString();
+			assert((init_type == "constant" || init_type == "xavier"));
+			return init_type;
+		}
+
 	private:
 		inline void _parser(ConstCPtr netfile_path) {
 			std::ifstream ifs(netfile_path);
