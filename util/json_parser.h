@@ -68,6 +68,12 @@ namespace mlp {
 				neuron_nums.push_back(itr->GetInt());
 			}
 		}
+		
+		inline ConstCPtr get_net_name() const {
+			assert(document.HasMember("Name"));
+			assert(document["Name"].IsString());
+			return document["Name"].GetString();
+		}
 
 	private:
 		inline void _parser(ConstCPtr netfile_path) {
