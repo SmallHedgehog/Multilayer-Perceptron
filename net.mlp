@@ -14,6 +14,13 @@
 			25,
 			20
 		],
+		"init_type": [
+			"constant",
+			"xavier",
+			"constant",
+			"xavier",
+			"constant",
+		],
 		"type": "sigmoid"
 	},
 	"Loss": {
