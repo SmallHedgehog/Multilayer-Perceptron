@@ -38,17 +38,17 @@ Using Json file to define mlp network structure
 }
 ```
 ### Data
-using Json object to stand for input layer
+#### using Json object to stand for input layer
 * output_num: The number of input layer
 * type: The form of the data, text or image
 * file_path: The absolute data path
 ### Inner
-fully connected layer
+#### fully connected layer
 * hidden_num: The number of the fully connected layer
 * neuron_num: Each of hidden layers' number
 * init_type: The initialization method of each hidden layers' weights
 * type: Activatation function type
 ### Loss
-loss output
+#### loss output
 * output_num: The number of output layer
 * type: The loss function type
