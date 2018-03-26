@@ -1,7 +1,7 @@
 # Multilayer-Perceptron
 Multilayer perception implementation by C++
 
-## How to define network structure for mlp
+## How to define network structure for this mlp implemention
 
 Using Json file to define mlp network structure
 
@@ -33,7 +33,8 @@ Using Json file to define mlp network structure
 	},
 	"Loss": {
 		"output_num": 10,
-		"type": "softmax"
+		"type": "softmax",
+		"weights_init_type": "xavier"
 	}
 }
 ```
@@ -52,3 +53,20 @@ Using Json file to define mlp network structure
 #### loss output
 * output_num: The number of output layer
 * type: The loss function type
+* weights_init_type: The initialization method of loss layer' weights
+
+## How to difine optimization method for this mlp implemention
+
+Using Json file to difine optimization method
+
+```Python
+{
+	"net_path": "net.mlp"
+	"solver": "SGD"
+	"max_iter": 1000
+}
+```
+
+* net_path: 
+* solver: The optimization method
+* max_iter:
