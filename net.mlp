@@ -25,6 +25,7 @@
 	},
 	"Loss": {
 		"output_num": 10,
-		"type": "softmax"
+		"type": "softmax",
+		"weights_init_type": "xavier"
 	}
 }
